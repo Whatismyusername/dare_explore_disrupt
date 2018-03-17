@@ -1,0 +1,90 @@
+<html>
+
+<head>
+    <title>Radar</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <!-- As if this Glitch were a typical HTML CodePen... -->
+    <script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
+
+    <!-- Use components defined in separate files. -->
+    <script src="arrow-key-rotation.js"></script>
+    <script src="play-on-window-click.js"></script>
+    <script src="play-on-vrdisplayactivate-or-enter-vr.js"></script>
+    <script src="hide-once-playing.js"></script>
+    <!-- CSS -->
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="radar.css" type="text/css" />
+    <!-- JQuery Library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+
+</head>
+
+<body>
+    <a-scene>
+        <!-- The original example also has this 180 degree rotation, to appear to be going forward. -->
+        <a-videosphere rotation="0 0 0" src="#video" play-on-window-click play-on-vrdisplayactivate-or-enter-vr>
+        </a-videosphere>
+
+        <!-- Define camera with zero user height, movement disabled and arrow key rotation added. -->
+        <a-camera user-height="4500" wasd-controls-enabled="true" arrow-key-rotation>
+            <!-- Text element for display messaging.  Hide once video is playing. -->
+            <a-entity id="msg" position="0 0 0" text="align:center; 
+                width:3;
+                wrapCount:100;
+                color:red;
+                value:Click window to make the video play, if needed." hide-once-playing="#video">
+            </a-entity>
+        </a-camera>
+
+        <!-- Wait for the video to load. -->
+        <a-assets>
+            <!-- Single source video. -->
+            <video id="video" style="display:none" autoplay loop crossorigin="anonymous" playsinline webkit-playsinline>
+          <!-- MP4 video source. -->
+          <source type="video/mp4"
+               src="https://ucarecdn.com/fadab25d-0b3a-45f7-8ef5-85318e92a261/" />
+        </video>
+        </a-assets>
+    </a-scene>
+
+    <div class="radar">
+        <div class="pointer"></div>
+        <div class="shadow"></div>
+    </div>
+    <img id="airPlane" src="http://www.vancitymommyd.com/wp-content/uploads/2018/01/cartoon-plane-cartoon-plane-images-clipart-free-download.png">
+
+    <div class="dashboard">
+        <div class="radar-wrapper">
+            <div class="radar">
+                <div class="pointer"></div>
+                <div class="shadow"></div>
+            </div>
+        </div>
+        <div class="dashboarddata">
+            <ul>
+                <li>City: New York</li>
+                <li>Latitude: 40.7128° N</li>
+                <li>Longitude: 74.0060° W</li>
+                <li>Weather: Mostly Sunny</li>
+                <li>Temperature: 42°</li>
+                <li>Wind: 9mph</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- GreenSock CDN -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/plugins/CSSPlugin.min.js"></script>
+    <!--- Be sure to load EasePack if you want to use a specific ease -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/easing/EasePack.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenLite.min.js"></script>
+    <!--<img src="city.jpg">-->
+
+</body>
+
+
+</html>

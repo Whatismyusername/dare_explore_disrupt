@@ -1,0 +1,29 @@
+body {
+    background-color: white;
+}
+li {
+    display: inline;
+}
+li {
+    float: left;
+}
+
+a {
+    display: block;
+    padding: 8px;
+    background-color: white;
+}
+    body {
+    background-image: url("rsz-planet-0d208.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.definition {  color: white;
+    
+}
+
+.definition {  color: white;
+    
+}

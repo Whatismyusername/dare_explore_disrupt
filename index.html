@@ -1,18 +1,57 @@
 <html>
-    <head>
-        <title>Rader website</title>
-        
-        <!-- CSS -->
-        <link type="text/css" rel="stylesheet" href="css/style.css" />
-        <link rel="stylesheet" href="style.css">
-        
-        <!-- JQuery Library -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        
-        <!-- JavaScript -->
-        <script src="script.js"></script>
-    </head>
-    <body>
-        
-    </body>
+
+<head>
+    <title>Radar</title>
+
+    <!-- CSS -->
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="radar.css" type="text/css" />
+    <!-- JQuery Library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+
+</head>
+
+<body>
+    <nav>
+
+        <a href="about.html">About</a> |
+        <a href="air.html">First Person Flight Simulation</a>
+    </nav>
+
+    <img id="airPlane" src="http://www.vancitymommyd.com/wp-content/uploads/2018/01/cartoon-plane-cartoon-plane-images-clipart-free-download.png">
+
+    <div class="dashboard">
+        <div class="radar-wrapper">
+            <div class="radar">
+                <div class="pointer"></div>
+                <div class="shadow"></div>
+            </div>
+        </div>
+        <div class="dashboarddata">
+            <ul>
+                <li id="city">City: New York</li>
+                <li id="latitude">Latitude: 40.7128° N</li>
+                <li id="longitude">Longitude: 74.0060° W</li>
+                <li id="weather">Weather: Mostly Sunny</li>
+                <li id="wind">Wind: 9mph</li>
+                <li id="pressure">Pressure:</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- GreenSock CDN -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/plugins/CSSPlugin.min.js"></script>
+    <!--- Be sure to load EasePack if you want to use a specific ease -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/easing/EasePack.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenLite.min.js"></script>
+    <!--<img src="city.jpg">-->
+
+</body>
+
+
 </html>
